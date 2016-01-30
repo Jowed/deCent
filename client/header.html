@@ -1,41 +1,39 @@
 <template name = "Header">
-<div class = "ui two column padded grid container">
-		<div class="four wide left black floated column">
-		<a href = "/">
-			<h1 class ="ui green header">Grass Roots</h1>
+<div class = "ui two column equal padded grid container">
+		<div class="left floated black column">
+			<a href = "/" class="horizontal column">
+			<h1 class ="ui huge green item"><span style="padding-bottom: 6%; font-size: 66px; color: #009900;">
+			Grass Roots
+			</span>
+			<img src ="leaf.png" class = "ui item">
+			</h1>
 		</a>
 		</div>
-	<div class="ten wide right floated black column">
-		<div class="ui horizontal list">
+	<div class="right floated black column">
+		<div class="ui centered large horizontal list" style="padding-top: 13%;">
 		{{#if loggedin}}
 			<div class="item">
 				<i class="dashboard icon"></i>
 				<div class="content">
-					<a href="/">Dashboard</a>
-				</div>
-			</div>
-			<div class="item">
-				<i class="dashboard icon"></i>
-				<div class="content">
-					<a href="/">Browse</a>
+					<a href="/" style="color: white;">Dashboard</a>
 				</div>
 			</div>
 			<div class="item">
 				<i class="search icon"></i>
 				<div class="content">
-					<a href="/browse">Browse</a>
+					<a href="/browse" style="color: white;">Browse</a>
 				</div>
 			</div>
 			<div class="item">
 			<i class="user icon"></i>
 				<div class="content">
-					<a href="/profile/{{userid}}">My Account</a>
+					<a href="/profile/{{userid}}" style="color: white;">My Account</a>
 				</div>
 			</div>
 			<div class="item">
 			<i class="user icon"></i>
 				<div class="content">
-					<a class="logout">Log out</a>
+					<a class="logout" style="color: white;">Log out</a>
 				</div>
 			</div>
 			{{else}}
