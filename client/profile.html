@@ -12,7 +12,10 @@
 <h3 class="header"></h3>
 
 {{/with}}
-
+<button class="addland">Add Land</button>
+{{#each user_lands}}
+	{{>Land_Card}}
+{{/each}}
 
 </div>
 </div>
