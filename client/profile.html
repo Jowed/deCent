@@ -5,9 +5,13 @@
 <div class="eight wide column">
 {{>Header}}
 
-<h2 class="header"> {{user.name}} </h2>
 
+{{#with user_profile}}
 
+<h2 class="header"> {{firstname}} {{lastname}} </h2>
+<h3class="header"></h3>
+
+{{/with}}
 
 
 </div>
