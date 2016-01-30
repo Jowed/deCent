@@ -1,14 +1,17 @@
 <template name="Home">
-{{>Header}}
-<div class="ui page">
-<div class="ui centered grid">
-<div class="eight wide column">
-
-
-
-
-</div>
-</div>
-</div>
-
+	<div class="ui page">
+		<div class="ui centered grid">
+			<div class="eight wide column">
+				{{>Header}}
+				<div class="ui two column grid">
+					<div class = "ui column">
+						{{>Description}}
+					</div>
+					<div class="ui column">
+						<button type="button"><a href="/register">Register</a></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
