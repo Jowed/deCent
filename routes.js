@@ -13,7 +13,7 @@ Router.route('/register', function () {
 Router.route('/profile/:user_id', function () {
     console.log(Meteor.users.findOne(this.params.user_id))
     this.render('Profile', {     // make this template
-	data: function ()
+	data: function () 
 	{
 	    return {user: Meteor.users.findOne(this.params.user_id)}
 	}
