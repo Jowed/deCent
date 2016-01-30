@@ -21,3 +21,4 @@ insecure                # Allow all DB writes from clients (for prototyping)
 semantic:ui-css@2.0.4
 iron:router
 accounts-base
+accounts-password
