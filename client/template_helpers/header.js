@@ -6,3 +6,9 @@ Template.Header.helpers({
 		return Meteor.user();
 	}
 })
+Template.Header.events({
+	"click .logout": function(event){
+		event.preventDefault();
+		Meteor.logout();
+	}
+})
