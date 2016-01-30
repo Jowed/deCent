@@ -9,28 +9,34 @@
 <h2 class="header"> Register </h2>
 
 
-
-<form class="ui form">
+{{#if logged_in}}
+<form class="ui register form">
   <div class="field">
     <label>First Name</label>
-    <input name="first-name" placeholder="First Name" type="text">
+    <input name="first" placeholder="First Name" type="text">
   </div>
 
   <div class="field">
     <label>Last Name</label>
-    <input name="last-name" placeholder="Last Name" type="text">
+    <input name="last" placeholder="Last Name" type="text">
   </div>
 
   <div class="field">
     <label>Zipcode</label>
-    <input name="zip-code" placeholder="Zipcode" type="text">
+    <input name="zipcode" placeholder="Zipcode" type="text">
   </div>
 
-
-
+  <div class="field">
+    <label>Password</label>
+    <input name="password" placeholder="Password" type="text">
+  </div>
   <button class="ui button" type="submit">Submit</button>
 </form>
+{{else}}
 
+{{>loginButtons}}
+
+{{/if}}
 
 
 </div>
