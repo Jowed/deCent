@@ -1,27 +1,32 @@
 <template name = "Header">
 <div class = "ui two column grid">
-	<div class="five wide column">deCent</div>
+		<div class="four wide column">
+			<h1 class ="ui green header">Grass Roots</h1>
+		</div>
 	<div class="ten wide column">
 		<div class="ui horizontal list">
 			<div class="item">
 				<i class="dashboard icon"></i>
 				<div class="content">
-					<a href="#">Dashboard</a>
-				</div>
-			</div>
-			<div class="item">
-			<i class="user icon"></i>
-				<div class="content">
-					<a href="#">My Account</a>
+					<a href="/">Dashboard</a>
 				</div>
 			</div>
 			<div class="item">
 				<i class="idea icon"></i>
 				<div class="content">
-					<a href="#">My Proposals</a>
+					<a href="/">My Proposals</a>
 				</div>
 			</div>
+			{{#if loggedin}}
+			<div class="item">
+			<i class="user icon"></i>
+				<div class="content">
+					<a href="/profile/{{userid}}">My Account</a>
+				</div>
+			</div>
+			{{/if}}
 		</div>
 	</div>
+	
 </div>
 </template>
