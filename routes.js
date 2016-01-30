@@ -10,12 +10,6 @@ Router.route('/user-register', function () {
   });
 });
         
-Router.route('/new-land/:user_id', function () {
-  this.render('Register_Land', {   // make this template
-    data: function () {user: Users.findOne(this.params.user_id)} 
-  });
-});
-        
 Router.route('/profile/:user_id', function () {
   this.render('Profile', {     // make this template
     data: function () {user: Users.findOne(this.params.user_id)} 
