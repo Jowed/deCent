@@ -5,27 +5,39 @@
 {{>Header}}
 <div class="ui page">
 <div class="ui centered container">
-<div class="equal column" style="padding-top: 2%;">
-	<!--<div class="ui page">-->
-		<!--<div class = "ui centered grid">-->
-		  <!--<div class="column">-->
+<div class="equal column" style="padding-top: 2%; padding-bottom: 2%;">
+			<div class = "ui three column centered relaxed grid" style="padding: 2%;">
+				
+				<div class="column">
+					<img class = "ui left floated image" src="patrick_tree.jpg" style = "border-radius: 12px; box-shadow: 5px 5px 5px black;">
+				</div >
+				<div class="column">
+					
+					<img class = "ui image" src="patrick_tree.jpg" style = "border-radius: 12px; box-shadow: 5px 5px 5px black;">
+				</div>
+				<div class="column">				
+					<img class = "ui right floated image" src="patrick_tree.jpg" style = "border-radius: 12px; box-shadow: 5px 5px 5px black;">
+				</div>
+			</div>
 				<div class="ui two column centered relaxed grid">
 					<div class = "ui column">
 						{{>Description}}
 					</div>
-					<div class="ui padded two column grid">
-					<div class="column">
-						{{>Login}}
+					{{#if loggedin}}
+					<div class="ui column"></div>
+					{{else}}
+					<div class = "ui column">
+						<div class="ui stackable two column grid">
+								{{>Login}}
+						</div>
+						<div class="ui two column grid">
+							<button type="button"><a href="/register">Register</a></button> 
+						</div>
 					</div>
-					<div class = "column">
-						<button type="button"><a href="/register">Register</a></button>
-					</div>
-					</div>
+				
+					{{/if}}
 				</div>
 				{{>Footer}}
-			<!--</div>-->
-		<!--</div>-->
-	<!--</div>-->
 
 </div>
 </div>

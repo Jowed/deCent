@@ -1,13 +1,13 @@
 <template name="Browse">
-
-<div class="ui page">
-<div class="ui centered grid">
-<div class="eight wide column">
 {{>Header}}
-{{#each land}}
-	{{>Land_Card}}
-{{/each}}
-</div>
-</div>
+<div class="ui page">
+	<div class="ui centered container">
+		<div class="equal column" style="padding-top: 2%; padding-bottom: 2%;">
+			{{#each land}}
+				{{>Land_Card}}
+			{{/each}}
+		</div>
+		{{>Footer}}
+	</div>
 </div>
 </template>

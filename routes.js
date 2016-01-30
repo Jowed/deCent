@@ -44,3 +44,7 @@ Router.route('/propose/:user_id/:land_id', function(){
 //   });
 // });
         
+Router.route('/resources', function () {
+  this.render('Resources', {   // make this template
+  });
+});
