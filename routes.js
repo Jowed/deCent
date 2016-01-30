@@ -12,7 +12,7 @@ Router.route('/register', function () {
         
 Router.route('/profile/:user_id', function () {
   this.render('Profile', {     // make this template
-    data: function () {user: Users.findOne(this.params.user_id)} 
+    data: function () {user: users.findOne(this.params.user_id)}
   });
 });
         
