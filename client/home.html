@@ -2,26 +2,30 @@
 
 
 
-
+{{>Header}}
 <div class="ui page">
-<div class="ui centered grid">
-<div class="eight wide grey column" style = "padding: 0px;">
-	<div class="ui page">
-	{{>Header}}
-		<div class="ui centered grid">
-		  <div class="column">
+<div class="ui centered container">
+<div class="equal column" style="padding-top: 2%;">
+	<!--<div class="ui page">-->
+		<!--<div class = "ui centered grid">-->
+		  <!--<div class="column">-->
 				<div class="ui two column centered relaxed grid">
 					<div class = "ui column">
 						{{>Description}}
 					</div>
-					<div class="ui column">
-						<button type="button"><a href="/register">Register</a></button>
+					<div class="ui padded two column grid">
+					<div class="column">
 						{{>Login}}
 					</div>
+					<div class = "column">
+						<button type="button"><a href="/register">Register</a></button>
+					</div>
+					</div>
 				</div>
-			</div>
-		</div>
-	</div>
+				{{>Footer}}
+			<!--</div>-->
+		<!--</div>-->
+	<!--</div>-->
 
 </div>
 </div>
