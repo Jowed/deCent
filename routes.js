@@ -4,7 +4,7 @@ Router.route('/', function () {
   });
 });
         
-Router.route('/user-register', function () {
+Router.route('/register', function () {
   this.render('Register', { //make this template
     data: function () {}
   });
