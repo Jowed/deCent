@@ -16,7 +16,7 @@ Router.route('/profile/:user_id', function () {
   });
 });
         
-Router.route('/search-land/:search', function () {
+Router.route('/browse', function () {
   this.render('SearchLand', {   // make this template
     data: function () {search: this.params.search}
   });
