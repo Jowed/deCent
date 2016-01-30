@@ -24,10 +24,23 @@ Router.route('/browse', function () {
     data: function () {search: this.params.search}
   });
 });
-        
-Router.route('/search-grower/:search', function () {
-  this.render('SearchGrowers', { // make this template
-    data: function () {search: this.params.search}
-  });
+
+Router.route('/propose/:user_id/:land_id', function(){
+    this.render('Proposition', {
+	data: function() {
+	    land = Land.findOne(this.params.land_id);
+	    return {
+		user: Meteor.users.findOne(this.params.user_id),
+		land: land,
+		owner: "sdsd"//Meteor.users.findOne(land.owner)
+	    };
+	}
+    });
 });
+
+// Router.route('/search-grower/:search', function () {
+//   this.render('SearchGrowers', { // make this template
+//     data: function () {search: this.params.search}
+//   });
+// });
         
