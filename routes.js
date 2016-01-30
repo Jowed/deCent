@@ -6,16 +6,20 @@ Router.route('/', function () {
         
 Router.route('/register', function () {
   this.render('Register', { //make this template
-    data: function () {}
+      data: function () {}
   });
 });
-        
+
 Router.route('/profile/:user_id', function () {
-  this.render('Profile', {     // make this template
-    data: function () {user: users.findOne(this.params.user_id)}
-  });
+    console.log(Meteor.users.findOne(this.params.user_id))
+    this.render('Profile', {     // make this template
+	data: function ()
+	{
+	    return {user: Meteor.users.findOne(this.params.user_id)}
+	}
+    });
 });
-        
+
 Router.route('/browse', function () {
   this.render('SearchLand', {   // make this template
     data: function () {search: this.params.search}
