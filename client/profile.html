@@ -12,16 +12,17 @@
 
 {{/with}}
 <h2 class="center aligned header">My Land Proposals</h2>
-	<button class="ui left icon button">
-	<i class = "settings icon"></i>
-	Edit Account
-	</button>
+<a class="ui left icon button" href="/edit_profile/{{user_id}}">
+    <i class = "settings icon"></i>
+    Edit Account
+</a>
+
 <button class="ui red button right icon addland">	
-	<i class= "plus icon"></i>
-	Add Land
+  <i class= "plus icon"></i>
+  Add Land
 </button>
 {{#each user_lands}}
-	{{>Land_Card}}
+{{>Land_Card}}
 {{/each}}
 
 </div>
