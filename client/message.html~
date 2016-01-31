@@ -1,0 +1,8 @@
+<template name="MessengerInput">
+<form class ="message">
+  <div class="inline field">
+    <input name="text"> placeholder="send a message" type="text">
+  </div>
+  <button class+"ui button" type="submit">Send</button>
+</form>
+</template>

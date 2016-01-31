@@ -12,9 +12,3 @@ Template.Proposition.events({
 	             subject,
 	             message)              //proposition
 
-	console.log("/profile/" )//+ template.data.user._id)
-	Router.go("/")///profile/" + template.user._id)
-}
-
-
-})

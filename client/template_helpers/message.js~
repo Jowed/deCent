@@ -1,0 +1,14 @@
+chatlog = []
+
+Template.MessengerInput.events ( {
+    "submit .message":function(event){
+	console.log(event)
+	var message= event.target.text.value;
+	Chats.update(Chats.findOne()._id, {$push: { log: message} })
+    }
+} )
+
+Template.ChatLog.helpers({
+    sentence:function(){return Chats.findOne().log}
+})
+

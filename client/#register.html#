@@ -1,0 +1,44 @@
+<template name="Register">
+
+<div class="ui page">
+<div class="ui centered grey grid">
+<div class="eight wide column">
+
+{{>Header}}
+
+<h2 class="header"> Register </h2>
+
+
+{{#if logged_in}}
+<form class="ui register form">
+  <div class="field">
+    <label>First Name</label>
+    <input name="first" placeholder="First Name" type="text">
+  </div>
+
+  <div class="field">
+    <label>Last Name</label>
+    <input name="last" placeholder="Last Name" type="text">
+  </div>
+
+  <div class="field">
+    
+    <label>Zipcode</label>
+    <input name="zipcode" placeholder="Zipcode" type="text">
+  </div>
+
+
+  <button class="ui button" type="submit">Submit</button>
+</form>
+{{else}}
+
+{{>loginButtons}}
+
+{{/if}}
+
+
+</div>
+</div>
+</div>
+
+</template>

@@ -28,11 +28,12 @@ Router.route('/browse', function () {
 Router.route('/propose/:user_id/:land_id', function(){
     this.render('Proposition', {
 	data: function() {
-	    land = Land.findOne(this.params.land_id);
+	    var land = Land.findOne(this.params.land_id);
+	    var owner = Meteor.users.findOne(land.owner)
 	    return {
 		user: Meteor.users.findOne(this.params.user_id),
 		land: land,
-		owner: "sdsd"//Meteor.users.findOne(land.owner)
+		owner: owner
 	    };
 	}
     });
@@ -44,3 +45,9 @@ Router.route('/propose/:user_id/:land_id', function(){
 //   });
 // });
         
+Router.route('/messenger', function () {
+    this.render('MessengerPage', //{
+//	       }
+);
+});
+
