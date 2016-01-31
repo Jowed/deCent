@@ -38,6 +38,13 @@ Router.route('/propose/:user_id/:land_id', function(){
     });
 });
 
+Router.route('/conversation/:conversation_id', function () {
+  this.render('MessengerPage', {
+      data: function() {
+	  return {chat: this.params.conversation_id}
+      }
+  });
+});
 // Router.route('/search-grower/:search', function () {
 //   this.render('SearchGrowers', { // make this template
 //     data: function () {search: this.params.search}

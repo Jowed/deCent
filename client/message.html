@@ -14,6 +14,27 @@
 </template>
 
 <template name="MessengerPage">
-  {{> ChatLog}}
-  {{> MessengerInput}}
+  {{>Header}}
+<div class="ui page">
+	<div class="ui centered container">
+		<div class="equal column" style="padding-top: 2%; padding-bottom: 2%;">
+			<div class = "ui three column centered relaxed grid" style="padding: 2%;">
+
+
+<div class="column">
+{{#each talker}}
+{{/each}}
+</div>
+
+<div class="column">
+<div class="row">  {{> ChatLog chat=./chat}}</div>
+
+<div class="row">   {{> MessengerInput chat=./chat}}</div>
+			  </div>
+
+		</div>
+  {{>Footer}}
+			</div>
+		</div>
+	</div>
   </template>
