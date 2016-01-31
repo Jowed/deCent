@@ -1,6 +1,20 @@
 <template name="Login">
 	<div class="ui middle aligned center aligned black header">Log in</div>
 	<form class ="login-form">
+		{{#if errorMessage}}
+		<div class="field" style="padding: 2%;">
+			<div class="ui left icon input error">
+			<i class="user icon"></i>
+			<input name="username" placeholder="Email Address" type="text">
+			</div>
+		</div>
+		<div class="field" style = "padding: 2%; padding-bottom: 3%;">
+			<div class="ui left icon input error">
+			<i class="lock icon"></i>
+			<input name="password" placeholder="Password" type="password">
+			</div>
+		</div>
+		{{else}}
 	    <div class="field" style="padding: 2%;">
 			<div class="ui left icon input">
 			<i class="user icon"></i>
@@ -13,9 +27,17 @@
 			<input name="password" placeholder="Password" type="password">
 			</div>
 		</div>
+		{{/if}}
 		<div class="ui middle aligned middle centered grid" style = "padding-right: 4%;">
 			<div class="three wide column"><button class="ui secondary button" type="submit" style = "color: white;">Login</button></div>
 			<div class="three wide column"><a href="/register"><button type= "button" class = "ui secondary button" style = "color: white;">Register</button></a></div>
 		</div>
 	</form>
+	<div class="alert-container" style = "padding: 3%;">
+		{{#if errorMessage}}
+		<div class="ui negative message">
+		<span><i class="icon-sign"></i>{{errorMessage}}</span>
+		</div>
+		{{/if}}
+		</div>
 </template>

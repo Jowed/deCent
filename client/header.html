@@ -1,13 +1,23 @@
 <template name = "Header">
 <div class = "ui two column stackable grid container">
 		<div class="left floated black column">
-			<a href = "/" class="horizontal column">
+			{{#if loggedin}}
+			<a href="/profile/{{userid}}" class = "horizontal column">
 			<h1 class ="ui huge green item"><span style="padding-bottom: 6%; font-size: 66px; color: #009900;">
 			Grass Roots
 			</span>
 			<img src ="leaf.png" class = "ui item">
 			</h1>
-		</a>
+			</a>
+			{{else}}
+			<a href="/" class = "horizontal column">
+			<h1 class ="ui huge green item"><span style="padding-bottom: 6%; font-size: 66px; color: #009900;">
+			Grass Roots
+			</span>
+			<img src ="leaf.png" class = "ui item">
+			</h1>
+			</a>
+			{{/if}}
 		</div>
 	<div class="right floated black column">
 		<div class="ui centered large horizontal list" style="padding-top: 13%;">
