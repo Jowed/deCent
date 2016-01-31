@@ -25,8 +25,13 @@ Template.Land_Card.events({
     "click .edit-land_card": function(event, template){
 	console.log(template)
 	Session.set("editing_id", template.data._id)
-    }
-
+    },
+	
+	"click .delete-land_card": function(){
+		if (confirm("Are you sure?")){
+			Session.delete(Session.get("editing_id"));	
+		}
+	}
 })
 
 

@@ -5,17 +5,21 @@
 <div class="ui centered container">
 <div class="equal column" style="padding-top: 2%;">
 
-
 {{#with user_profile}}
 
 <h2 class="header"> {{firstname}} {{lastname}} </h2>
 <h3 class="header"></h3>
 
 {{/with}}
+<h2 class="center aligned header">My Land Proposals</h2>
+	<button class="ui left icon button">
+	<i class = "settings icon"></i>
+	Edit Account
+	</button>
 <button class="ui red button right icon addland">	
 	<i class= "plus icon"></i>
 	Add Land
-	</button>
+</button>
 {{#each user_lands}}
 	{{>Land_Card}}
 {{/each}}

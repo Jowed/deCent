@@ -7,6 +7,10 @@
 {{else}}
 <div class="ui segment">
   <div class="column">
+  {{#if can_edit owner}}
+	<div class="ui right floated small red button delete-land_card" style = "margin-top: 3%;">Delete</div>
+	<div class="ui right floated small green button edit-land_card" style = "margin-top: 3%;">Edit</div>
+	{{/if}}
 	<h1>{{#with get_owner owner}}
 		{{firstname}} {{lastname}}
 	{{/with}}
@@ -19,9 +23,6 @@
 	<span class="ui gray large" style="margin:20px"> {{this}}, </span>
 	{{/each}}
 	</div>
-	{{#if can_edit owner}}
-	<div class="ui big red button edit-land_card">Edit</div>
-	{{/if}}
   </div>
   </div>
 {{/if}}
