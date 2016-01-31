@@ -1,17 +1,29 @@
 <template name="Land_Card">
+
+{{#if editing _id}}
+{{#with this}}
+{{>EditLand}}
+{{/with}}
+{{else}}
 <div class="ui segment">
   <div class="column">
 	<h1>{{#with get_owner owner}}
 		{{firstname}} {{lastname}}
 	{{/with}}
 	</h1>
+	<h3>{{name}}</h3>
 	<h3>{{size}}</h3>
 	<h3>{{zipcode}}</h3>
-	<div class = "ui">
+	<div>
 	{{#each tags}}
 	<span class="ui gray large" style="margin:20px"> {{this}}, </span>
 	{{/each}}
 	</div>
+	{{#if can_edit owner}}
+	<div class="ui big red button edit-land_card">Edit</div>
+	{{/if}}
   </div>
   </div>
+{{/if}}
+
 </template>
