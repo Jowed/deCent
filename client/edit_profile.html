@@ -1,4 +1,5 @@
-<template name="Register">
+
+<template name="Edit_Profile">
 
 {{>Header}}
 <div class="ui page">
@@ -6,10 +7,9 @@
 <div class="equal column" style="padding-top: 2%;">
 
 
-<h2 class="header"> Register </h2>
+<h2 class="header"> Edit Profile </h2>
 
 
-{{#if logged_in}}
 <form class="ui register form">
   <div class="field">
     <label>First Name</label>
@@ -27,17 +27,17 @@
   </div>
 
   <div class="field">
-      <input name="steward" input type="checkbox" checked="{{steward}}" />
-      Check if you are a land steward.
+    <label>Interests</label>
+    <input name="interests" placeholder="Interests:  e.g. (ornimental, organic, fruit trees, permaculture)" type="text">
+  </div>
+
+  <div class="field">
+    <label>Skills</label>
+    <input name="skills" placeholder="Skills: (edible landscaping, pruning, irrigation)" type="text">
   </div>
 
   <button class="ui button" type="submit">Submit</button>
 </form>
-{{else}}
-
-{{>loginButtons}}
-
-{{/if}}
 
 
 </div>

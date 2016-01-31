@@ -5,13 +5,15 @@ Template.Register.events({
 	var first = event.target.first.value;
 	var last = event.target.last.value;
 	var zip = event.target.zipcode.value;
+	var steward = event.target.steward.value;
 	console.log(first, last, zip)
 	Meteor.users.update(
 	    {_id: Meteor.userId()},
 	    {$set: {
 		"profile.firstname": first,
 		"profile.lastname": last,
-		"profile.zipcode": zip
+		"profile.zipcode": zip,
+		"profile.steward": steward,
 	    }}
 	    
 	)

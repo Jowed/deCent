@@ -54,3 +54,13 @@ Router.route('/browse_profiles', function () {
     this.render('BrowseProfiles', {
     });
 });
+
+Router.route('/edit_profile/:user_id', function () {
+    console.log(Meteor.users.findOne(this.params.user_id))
+    this.render('Edit_Profile', {
+	data: function () 
+	{
+	    return {user: Meteor.users.findOne(this.params.user_id)}
+	}
+    });
+});
