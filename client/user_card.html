@@ -5,12 +5,19 @@
 	<h1>{{firstname}} {{lastname}}</h1>
 	<h3>{{zipcode}}</h3>
 	<div class = "ui">
-	{{#each tags}}
+	  <span class="strong">Interests:</span>
+		{{#each interests}}
+	<span class="ui gray large" style="margin:20px"> {{this}}, </span>
+	{{/each}}
+	<span class="strong"> Skills:</span>
+	{{#each skills}}
 	<span class="ui gray large" style="margin:20px"> {{this}}, </span>
 	{{/each}}
 	</div>
-	{{/with}}
+	{{#unless itsme ../_id}}
 	<button class="ui button new-chat"> Chat With {{firstname}}</button>
+	{{/unless}}
+	{{/with}}
   </div>
   </div>
 </template>

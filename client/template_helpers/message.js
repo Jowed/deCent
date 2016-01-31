@@ -63,3 +63,13 @@ Template.User_Card.events({
     }
 
 })
+
+Template.User_Card.helpers({
+    itsme: function(id)
+   {
+       return (id === Meteor.userId())
+
+}
+
+
+})

@@ -23,6 +23,8 @@ Router.route('/browse', function () {
   this.render('Browse', {   // make this template
     data: function () {search: this.params.search}
   });
+
+    Session.set("search", "");
 });
 
 Router.route('/propose/:user_id/:land_id', function(){
@@ -59,7 +61,10 @@ Router.route('/resources', function () {
 
 Router.route('/browse_profiles', function () {
     this.render('BrowseProfiles', {
+
     });
+
+    Session.set("search", "");
 });
 
 Router.route('/edit_profile/:user_id', function () {
