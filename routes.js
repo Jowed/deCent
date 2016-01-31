@@ -48,3 +48,9 @@ Router.route('/resources', function () {
   this.render('Resources', {   // make this template
   });
 });
+
+
+Router.route('/browse_profiles', function () {
+    this.render('BrowseProfiles', {
+    });
+});

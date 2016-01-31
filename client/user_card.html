@@ -1,0 +1,13 @@
+<template name="User_Card">
+<div class="ui segment">
+  <div class="column">
+	<h1>{{firstname}} {{lastname}}</h1>
+	<h3>{{zipcode}}</h3>
+	<div class = "ui">
+	{{#each tags}}
+	<span class="ui gray large" style="margin:20px"> {{this}}, </span>
+	{{/each}}
+	</div>
+  </div>
+  </div>
+</template>
