@@ -1,7 +1,9 @@
 Template.Land_Card.helpers({
+	
     get_owner: function(owner){
 	console.log(owner);
-	return Meteor.users.findOne(owner).profile;	},
+	return Meteor.users.findOne(owner);	},
+	
     can_edit: function(owner){
 	if (Meteor.userId() === owner)
 	    return true
@@ -57,7 +59,7 @@ Template.EditLand.events({
 	console.log(id, name, size, address, tags)
 	Land.update({_id: id},
 		    {$set:
-			 {
+			 { 
 			     "name": name,
 			     "size": size,
 			     "address": address,

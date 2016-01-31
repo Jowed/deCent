@@ -12,12 +12,15 @@
 	<div class="ui right floated small red button delete-land_card" style = "margin-top: 3%;">Delete</div>
 	<div class="ui right floated small green button edit-land_card" style = "margin-top: 3%;">Edit</div>
 	{{/if}}
-	<h1>{{#with get_owner owner}}
-		{{firstname}} {{lastname}}
+	<h1>
+	{{#with get_owner owner}}
+		typing {{profile.firstname}} f {{profile.lastname}}<a href="/profile/{{_id}}" class = "ui button">User's Profile</a>
 	{{/with}}
 	</h1>
-	<div class="ui relaxed four column grid">
+	<div class="ui relaxed five column grid">
 	<div class="row">
+	<div class="five wide center aligned column">
+	</div>
 	<div class="five wide center aligned column" style = "margin: 0px;">
 		<h3 class="ui segment">{{name}}</h3>
 	</div>
