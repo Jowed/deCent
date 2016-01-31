@@ -22,10 +22,12 @@
 </a>
 </div>
 <h2 class="center aligned header">My Land Proposals</h2>
+{{#if profile.steward}}
 <button class="ui red button right icon addland">	
   <i class= "plus icon"></i>
   Add Land
 </button>
+{{/if}}
 {{#each user_lands}}
 {{>Land_Card}}
 {{/each}}
