@@ -1,7 +1,16 @@
 Template.Profile.helpers({
     user_profile: function(){console.log(this, this); return this.user.profile },
     user_lands: function(){console.log(this.user._id);return Land.find({owner: this.user._id});},
-    user_id: function(){return this.user._id}
+    user_id: function(){return this.user._id},
+    itsme: function(id){
+	if (id === Meteor.userId())
+	{
+	    return true
+	}
+	else
+	    return false
+    }
+
 })
 
 Template.Profile.events({

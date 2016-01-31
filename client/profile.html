@@ -15,14 +15,16 @@
 
 {{/with}}
 
-
+{{#if itsme user._id}}
 <a class="ui right aligned icon button" href="/edit_profile/{{user_id}}">
     <i class = "settings icon"></i>
     Edit Account
 </a>
+{{/if}}
 </div>
-<h2 class="center aligned header">My Land Proposals</h2>
 {{#if profile.steward}}
+<h2 class="center aligned header">My Land Proposals</h2>
+
 <button class="ui red button right icon addland">	
   <i class= "plus icon"></i>
   Add Land

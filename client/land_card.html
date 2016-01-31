@@ -9,7 +9,7 @@
     <div class="ui two column doubling stackable grid container">
       <div class="column">
 	{{#unless itsme owner}}
-	<a href="/profile/{{_id}}" class = "ui right floated small orange button" style="margin-top: 3%;">User's Profile</a>
+	<a href="/profile/{{owner}}" class = "ui right floated small orange button" style="margin-top: 3%;">User's Profile</a>
 	{{/unless}}
 	{{#if can_edit owner}}
 	<div class="ui right floated small red button delete-land_card" style = "margin-top: 3%;">Delete</div>
