@@ -1,6 +1,7 @@
 <template name="User_Card">
 <div class="ui segment">
   <div class="column">
+    {{#with profile}}
 	<h1>{{firstname}} {{lastname}}</h1>
 	<h3>{{zipcode}}</h3>
 	<div class = "ui">
@@ -8,6 +9,8 @@
 	<span class="ui gray large" style="margin:20px"> {{this}}, </span>
 	{{/each}}
 	</div>
+	{{/with}}
+	<button class="ui button new-chat"> Chat With {{firstname}}</button>
   </div>
   </div>
 </template>
