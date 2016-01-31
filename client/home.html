@@ -4,10 +4,9 @@
 
 {{>Header}}
 <div class="ui page">
-<div class="ui centered container">
-<div class="equal column" style="padding-top: 2%; padding-bottom: 2%;">
+	<div class="ui centered container">
+		<div class="equal column" style="padding-top: 2%; padding-bottom: 2%;">
 			<div class = "ui three column centered relaxed grid" style="padding: 2%;">
-				
 				<div class="column">
 					<img class = "ui left floated image" src="patrick_tree.jpg" style = "border-radius: 12px; box-shadow: 5px 5px 5px black;">
 				</div >
@@ -26,21 +25,13 @@
 					{{#if loggedin}}
 					<div class="ui column"></div>
 					{{else}}
-					<div class = "ui column">
-						<div class="ui stackable two column grid">
-								{{>Login}}
-						</div>
-						<div class="ui two column grid">
-							<button type="button"><a href="/register">Register</a></button> 
-						</div>
-					</div>
-				
+					<div class="ui middle aligned center aligned column">{{>Login}}</div>
 					{{/if}}
 				</div>
 				{{>Footer}}
 
-</div>
-</div>
-</div>
-
+			</div>
+		</div>
+	</div>
+		
 </template>

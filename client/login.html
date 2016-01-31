@@ -1,13 +1,21 @@
 <template name="Login">
-	<form class ="ui login-form">
-	  <div class="field">
-			<label>Email</label>
-			<input name="username" placeholder="example@gmail.com" type="text">
+	<div class="ui middle aligned center aligned black header">Log in</div>
+	<form class ="login-form">
+	    <div class="field" style="padding: 2%;">
+			<div class="ui left icon input">
+			<i class="user icon"></i>
+			<input name="username" placeholder="Email Address" type="text">
+			</div>
 		</div>
-		<div class="field">
-			<label>Password</label>
+		<div class="field" style = "padding: 2%; padding-bottom: 3%;">
+			<div class="ui left icon input">
+			<i class="lock icon"></i>
 			<input name="password" placeholder="Password" type="password">
+			</div>
 		</div>
-	<button class="ui button" type="submit">Login</button>
+		<div class="ui middle aligned middle centered grid" style = "padding-right: 4%;">
+			<div class="three wide column"><button class="ui secondary button" type="submit" style = "color: white;">Login</button></div>
+			<div class="three wide column"><a href="/register"><button type= "button" class = "ui secondary button" style = "color: white;">Register</button></a></div>
+		</div>
 	</form>
 </template>
