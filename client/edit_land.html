@@ -1,0 +1,32 @@
+<template name="EditLand">
+  <div class="ui segment">
+  <div class="column">
+	<h2 class="header"> Edit Land </h2>
+
+
+	<form class="ui edit-land-form">
+	  <div class="field">
+	    <label>Land name or Admin</label>
+	    <input name="name" placeholder="Name" type="text" value="{{name}}">
+	  </div>
+
+	  <div class="field">
+	    <label>size</label>
+	    <input name="size" placeholder="size" type="text" value="{{size}}">
+	  </div>
+
+	  <div class="field">
+	    <label>Address</label>
+	    <input name="address" placeholder="Address" type="text" value="{{address}}">
+	  </div>
+
+	  <div class="field">
+	    <label>Interest & Attributes Tags</label>
+	    <input name="tags" placeholder="organics, fruit trees" type="text" value="{{stringTags tags}}">
+	    </div>
+	<button class="uibutton" type="submit">Save</button>
+
+  </form>
+  </div>
+  </div>
+</template>
