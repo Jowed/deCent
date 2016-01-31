@@ -17,17 +17,16 @@ Template.Login.events({
 });
 Template.Login.helpers({
 	errorMessage: function() {
-		Meteor.loginWithPassword(username,password);
-	        Meteor.setTimeout(function(){
-		    if (Meteor.user() != null)
-			Router.go('/profile/' + Meteor.userId());
-		    else    Session.set("login_fail", true)},1000)
+		Meteor.loginWithPassword(email, password, function(err) {
+		if (err) {
+			Session.set('errorMessage', err.message);
+		}
+	});
 	}
 })
 
 Template.Login.helpers({
-	log_fail: function(event){
-	    return Session.get("login_fail")
-
-	}
-})
+  errorMessage: function() {
+    return Session.get('errorMessage');
+  }
+});
