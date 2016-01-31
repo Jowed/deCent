@@ -15,12 +15,24 @@
 		{{firstname}} {{lastname}}
 	{{/with}}
 	</h1>
-	<h3>{{name}}</h3>
-	<h3>{{size}}</h3>
-	<h3>{{zipcode}}</h3>
-	<div>
+	<div class="ui relaxed three column grid">
+	<div class="row">
+	<div class="three wide center aligned column" style = "margin: 0px;">
+		<h3 class="ui segment">{{name}}</h3>
+	</div>
+	<div class="three wide center aligned column">
+		<h3 class = "ui segment">{{size}}</h3>
+	</div>
+	<div class="three wide center aligned column">
+		<h3 class="ui segment">{{zipcode}}</h3>
+	</div>
+	</div>
+	</div>
+	<div class="ui five column grid">
 	{{#each tags}}
-	<span class="ui gray large" style="margin:20px"> {{this}}, </span>
+	<div class="ui two wide column">
+		<h5 class="ui center aligned segment" style="background-color: green; color: white; padding: 1%;">{{this}}</h5>
+	</div>
 	{{/each}}
 	</div>
   </div>
