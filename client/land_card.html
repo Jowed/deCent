@@ -6,6 +6,7 @@
 {{/with}}
 {{else}}
 <div class="ui segment">
+	<div class="ui two column doubling stackable grid container">
   <div class="column">
   {{#if can_edit owner}}
 	<div class="ui right floated small red button delete-land_card" style = "margin-top: 3%;">Delete</div>
@@ -15,26 +16,28 @@
 		{{firstname}} {{lastname}}
 	{{/with}}
 	</h1>
-	<div class="ui relaxed three column grid">
+	<div class="ui relaxed four column grid">
 	<div class="row">
-	<div class="three wide center aligned column" style = "margin: 0px;">
+	<div class="five wide center aligned column" style = "margin: 0px;">
 		<h3 class="ui segment">{{name}}</h3>
 	</div>
-	<div class="three wide center aligned column">
+	<div class="four wide center aligned column">
 		<h3 class = "ui segment">{{size}}</h3>
 	</div>
-	<div class="three wide center aligned column">
+	<div class="four wide center aligned column">
 		<h3 class="ui segment">{{zipcode}}</h3>
 	</div>
 	</div>
 	</div>
 	<div class="ui five column grid">
 	{{#each tags}}
-	<div class="ui two wide column">
+	<div class="ui four wide column">
 		<h5 class="ui center aligned segment" style="background-color: green; color: white; padding: 1%;">{{this}}</h5>
 	</div>
 	{{/each}}
 	</div>
+  </div>
+  <div class="column"><!--{{>Directions}}--></div>
   </div>
   </div>
 {{/if}}
