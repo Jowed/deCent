@@ -6,9 +6,8 @@ Template.Profile.helpers({
 
 Template.Profile.events({
 	"click .addland": function(){
-		console.log("This button worked!!!"),
 		Land.insert({
-		        name: "Lazy Acres",
+		    name: "Lazy Acres",
 			owner: Meteor.userId(),
 			size: "1400 sq ft",
 			zipcode: "95076",

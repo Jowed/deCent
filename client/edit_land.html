@@ -1,30 +1,38 @@
 <template name="EditLand">
-  <div class="ui segment">
+  <div class="segment">
   <div class="column">
-	<h2 class="header"> Edit Land </h2>
+	<h2 class="header">Edit Land</h2>
 
 
-	<form class="ui edit-land-form">
-	  <div class="field">
-	    <label>Land name or Admin</label>
+	<form class="edit-land-form">
+	  <div class="field" style="margin: 2%;">
+	    <label>Land or Admin Name</label>
+		<div class="ui input">
 	    <input name="name" placeholder="Name" type="text" value="{{name}}">
+		</div>
 	  </div>
 
-	  <div class="field">
+	  <div class="field" style="margin: 2%;">
 	    <label>Size</label>
+		<div class="ui input">
 	    <input name="size" placeholder="Size" type="text" value="{{size}}">
-	  </div>
+		</div>
+		</div>
 
-	  <div class="field">
+	  <div class="field" style="margin: 2%;">
 	    <label>Address</label>
+		<div class="ui input">
 	    <input name="address" placeholder="Address" type="text" value="{{address}}">
+		</div>
 	  </div>
 
-	  <div class="field">
+	  <div class="field" style="margin: 2%;">
 	    <label>Interest & Attributes Tags</label>
+		<div class="ui input">
 	    <input name="tags" placeholder="organics, fruit trees" type="text" value="{{stringTags tags}}">
+		</div>
 	    </div>
-	<button class="ui green button" type="submit">Save</button>
+	<button class="ui green button" type="submit">OK</button>
 
   </form>
   </div>

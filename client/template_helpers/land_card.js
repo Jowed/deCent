@@ -27,10 +27,10 @@ Template.Land_Card.events({
 	Session.set("editing_id", template.data._id)
     },
 	
-	"click .delete-land_card": function(){
-		if (confirm("Are you sure?")){
-			Session.delete(Session.get("editing_id"));	
-		}
+	"click .delete-land_card": function(event, template){
+			if(confirm("Are you sure?")){
+			Land.remove(template.data._id);
+		}			
 	}
 })
 
