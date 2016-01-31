@@ -10,30 +10,30 @@
 <h2 class="header"> Edit Profile </h2>
 
 
-<form class="ui register form">
+<form class="ui edit-profile-form form">
   <div class="field">
     <label>First Name</label>
-    <input name="first" placeholder="First Name" type="text">
+    <input name="first" placeholder="First Name" type="text" value="{{user.profile.firstname}}">
   </div>
 
   <div class="field">
     <label>Last Name</label>
-    <input name="last" placeholder="Last Name" type="text">
+    <input name="last" placeholder="Last Name" type="text" value="{{user.profile.lastname}}">
   </div>
 
   <div class="field">
     <label>Zipcode</label>
-    <input name="zipcode" placeholder="Zipcode" type="text">
+    <input name="zipcode" placeholder="Zipcode" type="text" value="{{user.profile.zipcode}}">
   </div>
 
   <div class="field">
     <label>Interests</label>
-    <input name="interests" placeholder="Interests:  e.g. (ornimental, organic, fruit trees, permaculture)" type="text">
+    <input name="interests" placeholder="Interests:  e.g. (ornimental, organic, fruit trees, permaculture)" type="text" value="{{stringTags user.profile.interests}}">
   </div>
 
   <div class="field">
     <label>Skills</label>
-    <input name="skills" placeholder="Skills: (edible landscaping, pruning, irrigation)" type="text">
+    <input name="skills" placeholder="Skills: (edible landscaping, pruning, irrigation)" type="text" value="{{stringTags user.profile.interest}}">
   </div>
 
   <button class="ui button" type="submit">Submit</button>

@@ -22,7 +22,16 @@
 
 
 <div class="column">
-{{#each talker}}
+{{#each talkers}}
+<a href="/profile/{{_id}}">
+  <div class="ui inverted green segment grid">
+    <div class="row">
+      <div class="twelve wide column"><h4 class="header" >{{profile.firstname}} {{profile.lastname}} </h4></div>
+
+      <div class="four wide column"><i class="right aligned white inverted user icon"></i></div></div>
+  </div>
+</a>
+
 {{/each}}
 </div>
 
