@@ -1,0 +1,43 @@
+<template name="Resources">
+ 
+  
+
+
+
+{{>Header}}
+<div class="ui page">
+<div class="ui centered container">
+<div class="equal column" style="padding-top: 2%;">
+				
+<h1> Resources </h1>
+  <div class="ui celled bulleted relaxed list">
+    
+    {{#each resources}} 
+    
+    {{>ResourceItem}}
+    
+    {{/each}}
+  </div>
+
+
+
+				{{>Footer}}
+
+</div>
+</div>
+</div>
+</template>
+
+
+
+
+<template name="ResourceItem">
+  
+  <a href="{{url}}" class="item"> {{name}} </a>					    
+  <div class="description">
+    <p> {{description}} </p>
+    <div class="column">
+      
+    </div>
+  </div>
+</template>

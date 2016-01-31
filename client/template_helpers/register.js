@@ -13,10 +13,10 @@ Template.Register.events({
 		"profile.lastname": last,
 		"profile.zipcode": zip
 	    }}
-
+	    
 	)
 	Router.go('/profile/' + Meteor.userId())
-
+	
 
     }
 })
