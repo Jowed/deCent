@@ -1,5 +1,8 @@
 Template.Land_Card.helpers({
-	
+    itsme: function(id)
+    {	return (id === Meteor.userId())
+    },
+
     get_owner: function(owner){
 	console.log(owner);
 	return Meteor.users.findOne(owner);	},

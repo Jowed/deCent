@@ -1,48 +1,51 @@
 <template name="Land_Card">
 
-{{#if editing _id}}
-{{#with this}}
-{{>EditLand}}
-{{/with}}
-{{else}}
-<div class="ui segment">
-	<div class="ui two column doubling stackable grid container">
-  <div class="column">
-  {{#if can_edit owner}}
+  {{#if editing _id}}
+  {{#with this}}
+  {{>EditLand}}
+  {{/with}}
+  {{else}}
+  <div class="ui segment">
+    <div class="ui two column doubling stackable grid container">
+      <div class="column">
+	{{#unless itsme owner}}
+	<a href="/profile/{{_id}}" class = "ui right floated small orange button" style="margin-top: 3%;">User's Profile</a>
+	{{/unless}}
+	{{#if can_edit owner}}
 	<div class="ui right floated small red button delete-land_card" style = "margin-top: 3%;">Delete</div>
 	<div class="ui right floated small green button edit-land_card" style = "margin-top: 3%;">Edit</div>
 	{{/if}}
 	<h1>
-	{{#with get_owner owner}}
-		typing {{profile.firstname}} f {{profile.lastname}}<a href="/profile/{{_id}}" class = "ui button">User's Profile</a>
-	{{/with}}
+	  {{#with get_owner owner}}
+	  {{profile.firstname}} {{profile.lastname}}
+	  {{/with}}
 	</h1>
-	<div class="ui relaxed five column grid">
-	<div class="row">
-	<div class="five wide center aligned column">
-	</div>
-	<div class="five wide center aligned column" style = "margin: 0px;">
-		<h3 class="ui segment">{{name}}</h3>
-	</div>
-	<div class="four wide center aligned column">
-		<h3 class = "ui segment">{{size}}</h3>
-	</div>
-	<div class="four wide center aligned column">
-		<h3 class="ui segment">{{zipcode}}</h3>
-	</div>
-	</div>
+	<div class="ui grid">
+	  <div class="row">
+
+	    <div class="six wide column" style = "margin: 0px;">
+
+	      <h3 class="ui header">{{name}}</h3>
+	    </div>
+	    <div class="four wide column">
+	      <h3 class = "ui header">{{size}}</h3>
+	    </div>
+	    <div class="four wide column">
+	      <h3 class="ui header">{{zipcode}}</h3>
+	    </div>
+	  </div>
 	</div>
 	<div class="ui five column grid">
-	{{#each tags}}
-	<div class="ui four wide column">
-		<h5 class="ui center aligned segment" style="background-color: green; color: white; padding: 1%;">{{this}}</h5>
+	  {{#each tags}}
+	  <div class="ui four wide column">
+	    <h5 class="ui center aligned segment" style="background-color: green; color: white; padding: 1%;">{{this}}</h5>
+	  </div>
+	  {{/each}}
 	</div>
-	{{/each}}
-	</div>
+      </div>
+      <div class="column"><!--{{>Directions}}--></div>
+    </div>
   </div>
-  <div class="column"><!--{{>Directions}}--></div>
-  </div>
-  </div>
-{{/if}}
+  {{/if}}
 
 </template>

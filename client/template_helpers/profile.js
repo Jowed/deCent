@@ -9,9 +9,9 @@ Template.Profile.events({
 		Land.insert({
 		    name: "Lazy Acres",
 			owner: Meteor.userId(),
-			size: "1400 sq ft",
-			zipcode: "95076",
-			tags: ["peaches", "fig", "gummy worms", "money"]
+			size: "1000 sq ft",
+			zipcode: Meteor.user().profile.zipcode,
+			tags: ["kale", "peaches", "onions"]
 		})
 	}
 })
